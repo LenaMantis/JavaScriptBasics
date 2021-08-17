@@ -1,0 +1,115 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    //Задание 1
+
+    var a = 1, b = 1, c, d;
+    c = ++a; alert(c);           // префиксная форма возвращает новое значение, a=2
+    d = b++; alert(d);           // постфиксная форма возвращает старое значение, но b=2
+    c = (2 + ++a); alert(c);      // c=(2 + (2+1))   c=5, a=3
+    d = (2 + b++); alert(d);      // d=(2 + 2)    d=4, b=3(в выражении используется старое значение, потому что постфиксная форма)
+    alert(a);                    // 3
+    alert(b);                    // 3
+
+
+
+    //Задание 2
+
+    var a = 2;
+    var x = 1 + (a *= 2);  //x=5, x = 1 + (a = a * 2) => x = 1 + (2 * 2) => 5
+
+    //Задание 3
+
+    let a = 10;
+    let b = 7;
+    if (a >= 0 && b >= 0)
+        console.log(a - b);
+    else if (a < 0 && b < 0)
+        console.log(a * b);
+    else console.log(a + b);
+
+    //Задание 4
+
+    let a = 14;
+    switch (a) {
+        case 1: console.log('1 2 3 4 5 6 7 8 9 10 11 12 13 14 15');
+            break;
+        case 2: console.log('2 3 4 5 6 7 8 9 10 11 12 13 14 15');
+            break;
+        case 3: console.log('3 4 5 6 7 8 9 10 11 12 13 14 15');
+            break;
+        case 4: console.log('4 5 6 7 8 9 10 11 12 13 14 15');
+            break;
+        case 5: console.log('5 6 7 8 9 10 11 12 13 14 15');
+            break;
+        case 6: console.log('6 7 8 9 10 11 12 13 14 15');
+            break;
+        case 7: console.log('7 8 9 10 11 12 13 14 15');
+            break;
+        case 8: console.log('8 9 10 11 12 13 14 15');
+            break;
+        case 9: console.log('9 10 11 12 13 14 15');
+            break;
+        case 10: console.log('10 11 12 13 14 15');
+            break;
+        case 11: console.log('11 12 13 14 15');
+            break;
+        case 12: console.log('12 13 14 15');
+            break;
+        case 13: console.log('13 14 15');
+            break;
+        case 14: console.log('14 15');
+            break;
+        case 15: console.log('15');
+            break;
+        default: console.log('введите число от 1 до 15')
+    }
+
+    //Задание 5
+
+    function sum(a, b) {
+        return a + b;
+    }
+
+    function diff(a, b) {
+        return a - b;
+    }
+
+    function product(a, b) {
+        return a * b;
+    }
+
+    function quotient(a, b) {
+        return a / b;
+    }
+
+    //Задание 6
+
+    function mathOperation(a, b, operation) {
+        switch (operation) {
+            case sum: return sum(a, b);
+            case diff: return diff(a, b);
+            case product: return product(a, b);
+            case quotient: return quotient(a, b);
+            default: alert('Введите переменную 1, переменную 2 и название арифметической операции');
+        }
+    }
+
+    let x = mathOperation(8, 2, diff);
+    alert(x);
+
+    //Задание 7
+    /* null - отсутствие какого-либо объекта, указывает в никуда. Умышленное отсутствие значения. 0 - число, значение, равное 0.*/
+
+    //Задание 8
+
+    function power(val, pow) {
+        if (pow == 1)
+            return val;
+        else
+            return val * power(val, pow - 1);
+    }
+    console.log(power(12, 2));
+
+
+</script>
