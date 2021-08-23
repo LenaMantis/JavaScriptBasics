@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    //Задание 1
+    console.log('Простые числа');
+    let n = 100;
+
+    Number:
+    for (let i = 2; i <= n; i++) {
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j == 0) continue Number;
+        }
+        console.log(i);
+    }
+
+    console.log('+++++++++++++++++++++++');
+
+    //Задание 2 (я его сделала!!!! сама!!!! неимоверно собой горжусь ^_^)
+
+    let basket = [
+        ['Шерсть Норвегия', 4, 360],
+        ['Шерсть Россия', 5, 200],
+        ['Шерсть Турция', 3, 180],
+        ['Шерсть Китай', 8, 110],
+        ['Шерсть Исландия', 3, 680]
+    ];
+
+    function countBasketPrice() {
+        let sum = basket.reduce((accum, item) => {
+            return accum = accum + item[1] * item[2];
+        }, 0);
+        console.log('Стоимость корзины ' + sum)
+    }
+
+    countBasketPrice();
+
+    console.log('+++++++++++++++++++++++');
+
+    //Задание 3
+
+    for (let i = 0; i <= 9; console.log(i), i++) {
+    }
+
+    console.log('+++++++++++++++++++++++');
+
+    //Задание 4
+
+    let star = '';
+    for (let i = 0; i < 20; i++) {
+        star += 'X';
+        console.log(star);
+    }
+
+</script>
