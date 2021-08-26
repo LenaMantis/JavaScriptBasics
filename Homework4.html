@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    'use strict'
+
+    //Задание 1
+
+    let numberObject = {};
+
+    function convertType() {
+        if (numb < 0 || numb > 999) {
+            alert('Введите число от 0 до 999');
+            return console.log(numberObject);
+        }
+
+        numberObject.ones = numb % 10;
+        numberObject.tens = Math.floor((numb / 10) % 10);
+        numberObject.hundreds = Math.floor((numb / 100) % 10);;
+        return console.log(numberObject);
+    }
+
+    let numb = parseInt(prompt('Введите число от 0 до 999'));
+    convertType(numb);
+
+    //Задание 2
+
+
+</script>
