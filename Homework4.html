@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    'use strict'
+
+    //Задание 1
+
+    let numberObject = {};
+
+    function convertType() {
+        if (numb < 0 || numb > 999) {
+            alert('Введите число от 0 до 999');
+            return console.log(numberObject);
+        }
+
+        numberObject.ones = numb % 10;
+        numberObject.tens = Math.floor((numb / 10) % 10);
+        numberObject.hundreds = Math.floor((numb / 100) % 10);;
+        return console.log(numberObject);
+    }
+
+    let numb = parseInt(prompt('Введите число от 0 до 999'));
+    convertType(numb);
+
+    console.log('++++++++++++++++++++++++++++');
+
+    //Задание 2
+
+    let basket = [
+        {
+            name: 'Шерсть Норвегия',
+            count: 4,
+            price: 360
+        },
+        {
+            name: 'Шерсть Россия',
+            count: 5,
+            price: 200
+        },
+        {
+            name: 'Шерсть Турция',
+            count: 3,
+            price: 180
+        },
+        {
+            name: 'Шерсть Китай',
+            count: 8,
+            price: 110
+        },
+        {
+            name: 'Шерсть Исландия',
+            count: 3,
+            price: 680
+        },
+    ];
+
+    function countBasketPrice() {
+        let sum = 0;
+        for (let i = 0; i < basket.length; i++) {
+            sum = sum + basket[i].count * basket[i].price;
+        }
+        console.log('Стоимость корзины ' + sum);
+    }
+
+    countBasketPrice();
+
+</script>
