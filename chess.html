@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        'use strict'
+        let board = document.createElement('div');
+        document.body.appendChild(board);
+
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                let cell = j ? {} : { clear: 'left' };
+                let content = '';
+
+                if (i == 0 || i == 9)
+                    content = j > 0 && j < 9 ? 'ABCDEFGH'.charAt(j - 1) : null;
+                else if (j == 0 || j == 9)
+                    content = 9 - i;
+                else cell.background = (i + j) % 2 ? '#000' : '#fff';
+
+                let block = document.createElement('div');
+                cell.width = '50px';
+                cell.height = cell.width;
+                cell.textAlign = 'center';
+                cell.lineHeight = cell.width;
+                cell.float = 'left';
+                for (let n in cell) block.style[n] = cell[n];
+                if (content) block.innerHTML = content;
+                board.appendChild(block);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
