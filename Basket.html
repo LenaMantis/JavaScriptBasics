@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="basket"></div>
+
+
+    <script>
+        let basket = {
+            goods: [
+                {
+                    name: 'Шерсть Норвегия',
+                    count: 4,
+                    price: 360
+                },
+                {
+                    name: 'Шерсть Россия',
+                    count: 5,
+                    price: 200
+                },
+                {
+                    name: 'Шерсть Турция',
+                    count: 3,
+                    price: 180
+                },
+                {
+                    name: 'Шерсть Китай',
+                    count: 8,
+                    price: 110
+                },
+                {
+                    name: 'Шерсть Исландия',
+                    count: 3,
+                    price: 680
+                }
+            ],
+
+            countBasketPrice: function () {
+                return this.goods.reduce((accum, item) => accum += item.price * item.count, 0);
+            },
+
+            countBasketGoods: function () {
+                return this.goods.reduce((accum, item) => accum += item.count, 0);
+            },
+
+            talkingBasket: function () {
+                let mess = document.getElementById('basket');
+                mess.style.fontSize = '24px';
+                mess.style.margin = '50px';
+                if (this.goods.length == 0) {
+                    mess.innerHTML += 'Корзина пуста!';
+                } else {
+                    let count = this.countBasketGoods();
+                    let price = this.countBasketPrice();
+                    mess.innerHTML += 'В корзине ' + count + ' товаров на сумму ' + price + ' рублей';
+                }
+            }
+        }
+
+        basket.talkingBasket();
+
+    </script>
+</body>
+
+</html>
