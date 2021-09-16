@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 24px;
+        }
+
+        .wrap div {
+            width: 500px;
+            margin: 10px 0px;
+        }
+
+        .product,
+        .basket {
+            background-color: #FFDDCA;
+            border: 1px solid #B9A193;
+            padding: 15px;
+        }
+
+        .basket {
+            background-color: #A5BA93;
+            border: 1px solid #749F8D;
+        }
+
+        .clearBasket,
+        .product__add-to-cart {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <h2>Каталог</h2>
+            <div class="catalog"></div>
+        </div>
+        <div>
+            <h2>Корзина</h2>
+            <div id="basket">Корзина</div>
+            <button class="clearBasket">Очистить корзину</button>
+            <div class="result"></div>
+        </div>
+
+
+    </div>
+
+
+    <script src="Homework6.js"></script>
+</body>
+
+</html>
